@@ -22,4 +22,10 @@ make package/feeds/usbtemp/utmp-cli/compile
 ```
 Openwrt package (ipk) is created in `bin/packages/__target_arch__/usbtemp/` directory.
 
+Instead of running menuconfig the package could be marked as module by:
+```
+echo "CONFIG_PACKAGE_utmp-cli=m" >> .config
+make oldconfig
+```
+
 Digitemp package is available in official OpenWrt package repository.
